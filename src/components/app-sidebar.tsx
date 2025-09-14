@@ -73,7 +73,10 @@ export function AppSidebar() {
                           <item.icon className="size-4" />
                           <span>{item.title}</span>
                           {item.badge && (
-                            <Badge variant="secondary" className="ml-auto">
+                            <Badge
+                              variant={item.urgent ? "destructive" : "secondary"}
+                              className={`ml-auto ${item.urgent ? "animate-pulse" : ""}`}
+                            >
                               {item.badge}
                             </Badge>
                           )}
@@ -96,7 +99,10 @@ export function AppSidebar() {
                                   <subItem.icon className="size-4" />
                                   <span>{subItem.title}</span>
                                   {subItem.badge && (
-                                    <Badge variant="secondary" className="ml-auto">
+                                    <Badge
+                                      variant={subItem.urgent ? "destructive" : "secondary"}
+                                      className={`ml-auto ${subItem.urgent ? "animate-pulse" : ""}`}
+                                    >
                                       {subItem.badge}
                                     </Badge>
                                   )}
@@ -122,7 +128,10 @@ export function AppSidebar() {
                         <item.icon className="size-4" />
                         <span>{item.title}</span>
                         {item.badge && (
-                          <Badge variant="secondary" className="ml-auto">
+                          <Badge
+                            variant={item.urgent ? "destructive" : "secondary"}
+                            className={`ml-auto ${item.urgent ? "animate-pulse" : ""}`}
+                          >
                             {item.badge}
                           </Badge>
                         )}
