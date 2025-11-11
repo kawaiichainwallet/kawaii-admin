@@ -53,20 +53,25 @@ export const navigationConfig: NavigationItem[] = [
     icon: Users,
     children: [
       {
-        title: "用户管理",
+        title: "C端用户管理",
         href: "/users",
         icon: Users,
       },
       {
-        title: "KYC 管理",
+        title: "KYC 认证管理",
         href: "/users/kyc",
         icon: UserCheck,
         badge: "12",
       },
       {
-        title: "用户资产",
+        title: "用户资产管理",
         href: "/users/assets",
         icon: Wallet,
+      },
+      {
+        title: "用户权限管理",
+        href: "/users/permissions",
+        icon: Key,
       },
     ],
   },
@@ -196,6 +201,18 @@ export const navigationConfig: NavigationItem[] = [
     icon: Settings,
     permission: "system_management",
     children: [
+      {
+        title: "管理员管理",
+        href: "/admins",
+        icon: ShieldCheck,
+        permission: "admin_management",
+      },
+      {
+        title: "角色管理",
+        href: "/roles",
+        icon: Shield,
+        permission: "role_management",
+      },
       {
         title: "权限管理",
         href: "/system/permissions",
