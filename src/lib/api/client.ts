@@ -9,9 +9,10 @@ const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8
 
 /**
  * 创建axios实例
+ * baseURL指向Gateway地址，具体的服务路径在各API文件中指定
  */
 export const apiClient = axios.create({
-  baseURL: `${API_BASE_URL}/kawaii-admin`,
+  baseURL: API_BASE_URL,
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
